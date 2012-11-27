@@ -1,0 +1,538 @@
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 0px; }
+dd { margin: 0 0 0 0px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+@font-face
+{
+    font-family: Vornov;
+    src: url('../fonts/Voronov.ttf') format('truetype');
+}
+
+body, html
+{
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	background:transparent url(../images/main_bg.jpg);
+	padding: 0 0 0 0;
+}
+
+li{
+	list-style: none;
+}
+
+#nav-share{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+
+nav li{
+	display: inline;
+}
+
+#main-container
+{
+	width:1000px;
+	height:600px;
+	background:transparent url(../images/snowhill.jpg);
+	position:absolute;
+	margin-top:-300px;
+	margin-left:-500px;
+	top:50%;
+	left:50%;
+	border:solid 1px transparent;
+}
+
+#content{
+	width: 350px;
+	position: relative;
+	top: 150px;
+	left:400px;
+	z-index: 2;
+}
+
+#content h1{
+	background: url('../images/form_sprites.png') no-repeat 0 0;
+	width: 334px;
+	height: 92px;
+}
+
+
+label{
+	margin-bottom:10px;
+	display: block;
+}
+
+input{
+	margin-bottom: 10px;
+	
+	color:#4f4f51;
+}
+input:focus,
+textarea:focus,
+button:focus
+{
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 150, 255, 1);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(0, 150, 255, 1);
+    box-shadow: 0px 0px 3px 3px rgba(0, 150, 255, 1);
+}
+
+#input_1{
+	margin-bottom: 10px;
+	font-size: 180%;
+	width:330px;
+	height:80px;
+	padding:10px;
+	font-weight:lighter;
+	color:#4f4f51;
+	resize: none;
+}
+
+#label_3{
+	background: url('../images/form_sprites.png') no-repeat 0 -195px;
+	width: 78px;
+	height: 10px;
+}
+
+#label_4{
+	background: url('../images/form_sprites.png') no-repeat -187px -195px;
+	width: 81px;
+	height: 10px;	
+}
+
+#label_5 {
+	background: url('../images/form_sprites.png') no-repeat 0px -266px;
+	width: 137px;
+	height: 10px;
+}
+
+#label_6 {
+	background: url('../images/form_sprites.png') no-repeat -187px -266px;
+	width: 137px;
+	height: 10px;
+}
+
+#twitter a {
+    background: url("../images/nav_sprites.png") no-repeat scroll 0 -10px transparent;
+    display: inline-block;
+    height: 22px;
+    width: 100px;
+}
+
+#facebook a{
+	display: inline-block;
+	background: url('../images/nav_sprites.png') no-repeat -101px 0;
+	width: 200px;
+	height: 32px;
+}
+
+canvas, p{
+	font-family:'Vornov';
+	position: absolute;
+}
+
+p{text-indent:-6000px;}
+
+canvas
+{
+	display:none;
+	-webkit-transform:rotate(-3deg);
+	-moz-transform:rotate(-3deg);
+	-o-transform:rotate(-3deg);
+	/* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+	-ms-transform:rotate(-3deg);
+
+}
+
+
+.form-all{
+    width:350px;
+    color:Black !important;
+    font-family:Verdana;
+    font-size:12px;
+}
+
+.form-all li{
+	margin-top: 20px;
+}
+
+.form-textbox{
+    border: none;
+    height: 31px;
+    padding: 0 6px;
+}
+
+textarea{
+    border: none;
+	width: 350px;
+    height: 61px;
+}
+
+#preloader
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-33px;
+	margin-top:-33px;
+	width:66px;
+	height:66px;
+	background:transparent url(../images/ajax-loader.gif) no-repeat;
+	z-index:200;
+	padding-top:73px;
+	margin-left:-33px;
+	color:#4f4f51;
+	text-align:center;
+	display:none;
+}
+
+#sprite-container
+{
+	position:absolute;
+	z-index:10;
+	width:288px;
+	height:374px;
+	top:50%;
+	left:50%;
+	margin-left:-430px;
+	margin-top:-100px;
+	background:url(../images/animations/form_placeholder.png);
+}
+
+
+/* FGP STYLES */
+
+#thank-you{
+	width: 350px;
+	position: absolute;
+	top: 150px;
+	left:400px;
+	z-index: 500;
+}
+#thank-you p {
+    position: relative;
+    text-indent: 0;
+    font-family: verdana, sans-serif;
+}
+.validation-error {
+    background-color: #ffb6c1;
+}
+#fblike{
+    position:absolute;
+    left:23px;
+    bottom:15px;
+}
+#audio{
+    position:absolute;
+    top:23px;
+    left:23px;
+}
+#audio a{
+    display:block;
+    width:31px;
+    height:27px;
+    background: url(../images/audio.png) no-repeat;
+}
+/* webkit button hack */
+/* http://stackoverflow.com/questions/1681826/css-safari-on-mac-doesnt-adhere-to-my-submit-button-style */
+button {
+    border: none;
+    background:  #ccc;
+}
+.form-submit-button{
+    margin-top: 25px;
+	background: url('../images/button_sprites.png') no-repeat -100px 0px;
+	width: 80px;
+	height: 23px;
+}
+.preview-button {
+    margin-top:25px;
+	background: url('../images/button_sprites.png') no-repeat 0px 0px;
+	width: 80px;
+	height: 23px;
+}
+#replay {
+    position:absolute;
+    right:23px;
+    bottom:27px;
+}
+#replay a{
+    display: block;
+	background: url('../images/button_sprites.png') no-repeat -200px 0px;
+	width: 92px;
+	height: 23px;
+}
+
+/* END FGP STYLES */
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
